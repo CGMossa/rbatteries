@@ -56,7 +56,7 @@ Resample on the other hand behave more intuitively.
 resample(x, replace = TRUE)
 ```
 
-- [ ] A unit-test is warranted here, as to ensure that `resample` always
+- [x] A unit-test is warranted here, as to ensure that `resample` always
       behaves like this.
 
 ## What about up- and down-sampling?

@@ -17,5 +17,6 @@ URL: https://github.com/CGMossa/rbatteries
 BugReports: https://github.com/CGMossa/rbatteries/issues
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 2.1.0)
 VignetteBuilder: knitr
