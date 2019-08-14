@@ -1,6 +1,6 @@
 Package: rbatteries
 Title: Help write R with all the batteries included
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person(given = "First",
            family = "Last",
