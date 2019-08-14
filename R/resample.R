@@ -21,5 +21,5 @@ resample <- function(x, ...) {
     warning("Resample (upsampling) without replacement results in NA entries")
   }
 
-  x[do.call(sample.int, dots)]
+  x[sample.int(unlist(dots))]
 }
