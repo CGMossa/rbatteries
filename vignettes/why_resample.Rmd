@@ -1,7 +1,9 @@
 ---
 title: "Base sample is not safe"
 author: Mossa Merhi Reimert
-output: rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette:
+    df_print: tibble
 vignette: >
   %\VignetteIndexEntry{Base sample is not safe}
   %\VignetteEngine{knitr::rmarkdown}
@@ -59,7 +61,7 @@ resample(x, replace = TRUE)
 - [x] A unit-test is warranted here, as to ensure that `resample` always
       behaves like this.
 
-## What about up- and down-sampling?
+## Resample for upsampling and downsampling
 
 ```{r, error=TRUE}
 x <- 1:5
@@ -82,3 +84,28 @@ procedure forward.
 
 - [x] Make a unit-test that expects a warning whenever `replace = FALSE` and 
 `n >= length(x)`. 
+
+
+## Resampling datasets
+
+It is custom to have the rows of a data-frame denote the observations, and the
+column corresponds to variables [^regressors].
+
+[^regressors]: Also called regressors, features, and of course covariates. 
+
+Take the `iris`-dataset as an example. It contains `r nrow(iris)` observations,
+and say we want to downsample to three rows -- for whatever reason.
+
+```{r}
+resample(iris, n = 3)
+```
+
+This is not the expected result. The reason is, we are resampling along the first
+dimension, which the one designated to variables, and not observations.
+
+Here we have multiple ways of tackling this issue.
+
+- Make `resample` a generic, with specific behaviour for data-frames.
+- Somehow default the selection of any other existing axis to be "all".
+- Throw a warning whenever `x` is of non-vector type.
+
