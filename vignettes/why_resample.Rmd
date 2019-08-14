@@ -50,7 +50,7 @@ if (length(x) == 1L && is.numeric(x) && is.finite(x) &&
 }
 ```
 
-This behavior is documented in the details section of the help page of `sample`.
+This behaviour is documented in the details section of the help page of `sample`.
 
 Resample on the other hand behave more intuitively.
 
@@ -68,7 +68,7 @@ x <- 1:5
 resample(x, n = 10)
 ```
 
-This does not work, as the `n` in `sample.int` is preset.
+This does not work, as the `n` in `sample.int` is present.
 
 - [x] Change `resample` using `missing()` and also add a unit-test for this.
 

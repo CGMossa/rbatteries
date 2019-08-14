@@ -18,5 +18,6 @@ BugReports: https://github.com/CGMossa/rbatteries/issues
 Suggests: 
     knitr,
     rmarkdown,
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    tibble
 VignetteBuilder: knitr

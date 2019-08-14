@@ -26,7 +26,6 @@ resample.default <- function(x, ...) {
   x[sample.int(unlist(dots))]
 }
 
-
 #' @method resample data.frame
 #' @rdname resample
 #' @export
