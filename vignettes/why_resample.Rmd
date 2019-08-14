@@ -68,5 +68,17 @@ resample(x, n = 10)
 
 This does not work, as the `n` in `sample.int` is preset.
 
-- [ ] Change `resample` using `missing()` and also add a unit-test for this.
+- [x] Change `resample` using `missing()` and also add a unit-test for this.
 
+Upsampling results in a `NA` whenever `replace = FALSE` as well. This is not
+meaningful. There are two ways to solve this 
+
+- Default to `replace = TRUE` whenever `n >= length(x)`
+- Throw a warning
+
+It is not straightforward to change, because what if the user of `resample` calls
+it with `replace = FALSE` and `n >= length(x)`? A warning seems like the best
+procedure forward. 
+
+- [x] Make a unit-test that expects a warning whenever `replace = FALSE` and 
+`n >= length(x)`. 
