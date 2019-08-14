@@ -12,5 +12,9 @@
 #' resample(x)
 #'
 resample <- function(x, ...) {
-  x[sample.int(n = length(x), ...)]
+  dots <- list(...)
+
+  dots$n <- if (is.null(dots$n)) { length(x) } else { dots$n }
+
+  x[do.call(sample.int, dots)]
 }
