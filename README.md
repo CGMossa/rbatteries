@@ -1,24 +1,61 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # rbatteries
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-The goal of rbatteries is to ...
+The goal of `rbatteries` is to illustrate a point. About workflows
+within science using modern R idioms and packages.
 
 ## Installation
 
-You can install the released version of rbatteries from [CRAN](https://CRAN.R-project.org) with:
+You *cannot* install the released version of rbatteries from
+[CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("rbatteries")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+And the development version from [GitHub](https://github.com/) with:
 
 ``` r
-library(rbatteries)
-## basic example code
+# install.packages("devtools")
+devtools::install_github("CGMossa/rbatteries")
 ```
 
+Currently, one needs access to this repository inorder to make the
+`install_github`-call work as intended.
+
+## Overview
+
+This package was created using `usethis`. The first example developed is
+the `rbatteries::resample`. Alongside this functionality, there are also
+tests to ensure that this `resample` method works as intended.
+
+The help-file to `rbatteries::resample` should be very clear and close
+to the source code.
+
+A vignette is there to document behaviour, decisions and assumptions,
+that is then made into unit-tests.
+
+``` r
+browseVignettes("rbatteries")
+```
+
+to see these \[1\]. Note however that you need to enforce the building
+of vignettes, when installing an R-package from, say, GitHub. Thus,
+
+``` r
+devtools::install_github("CGMossa/rbatteries", build_vignettes = TRUE)
+```
+
+is needed here.
+
+Note that when such a package gets sent to CRAN, or drat-powered
+repositories, doesn’t need to build the vignettes on their own, but for
+now, this is necessary.
+
+1.  Currently, one on `resample`. Maybe more will follow.

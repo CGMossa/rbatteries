@@ -4,3 +4,4 @@
 ^Makefile$
 ^doc$
 ^Meta$
+^README\.Rmd$
