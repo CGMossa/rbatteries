@@ -1,0 +1,72 @@
+---
+title: "Base sample is not safe"
+author: Mossa Merhi Reimert
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Base sample is not safe}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rbatteries)
+```
+
+For the most part, `sample()` does the job very well. Given some vector, we can
+resample with replacement rather conveniently
+
+```{r}
+x <- 1:10
+sample(x, replace = TRUE)
+```
+
+But what if the vector `x` is of size one?
+
+```{r}
+x <- 42
+sample(x, replace=TRUE)
+```
+
+Suddenly the interpretation becomes sample from 1 to and including 42.
+
+Looking in the documentation of `sample`
+
+```{r}
+if (length(x) == 1L && is.numeric(x) && is.finite(x) && 
+    x >= 1) {
+  # if (missing(size)) # missing is not available outside of function decl.
+  #   size <- x
+  size <- x # replaced with this 
+  sample.int(x, size, replace = TRUE) 
+}
+```
+
+This behavior is documented in the details section of the help page of `sample`.
+
+Resample on the other hand behave more intuitively.
+
+```{r}
+resample(x, replace = TRUE)
+```
+
+- [ ] A unit-test is warranted here, as to ensure that `resample` always
+      behaves like this.
+
+## What about up- and down-sampling?
+
+```{r, error=TRUE}
+x <- 1:5
+resample(x, n = 10)
+```
+
+This does not work, as the `n` in `sample.int` is preset.
+
+- [ ] Change `resample` using `missing()` and also add a unit-test for this.
+
