@@ -105,7 +105,20 @@ dimension, which the one designated to variables, and not observations.
 
 Here we have multiple ways of tackling this issue.
 
-- Make `resample` a generic, with specific behaviour for data-frames.
+- [x] Make `resample` a generic, with specific behaviour for data-frames.
 - Somehow default the selection of any other existing axis to be "all".
 - Throw a warning whenever `x` is of non-vector type.
+
+
+A possible scenario: One-column `data.frame` that we wish to `resample`, e.g.
+
+```{r}
+sepal_length_10 <- resample(iris$Sepal.Length, n = 10)
+sepal_length_10
+class(sepal_length_10)
+```
+
+- [x] Make a unit-test that ensures that this yields a `data.frame`, with one column named `Sepal.Length`.
+
+
 

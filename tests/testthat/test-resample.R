@@ -35,3 +35,12 @@ test_that("Resampling on data.frames", {
   expect_equal(resampled_iris_no_rows,    expected = new_no_rows)
 })
 
+
+test_that("Resampling one-column data.frame should yield a one column data.frame",{
+  sepal_length_10 <- resample(iris[, "Sepal.Length", drop = FALSE], n = 10)
+  expect_s3_class(sepal_length_10, "data.frame")
+
+  expect_equal(names(sepal_length_10), expect = c("Sepal.Length"))
+  expect_length(sepal_length_10$Sepal.Length, n = 10)
+
+})
