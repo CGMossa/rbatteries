@@ -11,7 +11,7 @@
 #' x <- rnorm(10)
 #' quartiles(x)
 quartiles <-  function(x) {
-  quantile(x, probs = c(0, 0.25, 0.5, 0.75, 1))
+  stats::quantile(x, probs = c(0, 0.25, 0.5, 0.75, 1))
 }
 
 #' @describeIn quartiles The deciles of `x`
@@ -19,11 +19,10 @@ quartiles <-  function(x) {
 #' @examples
 #' deciles(x)
 deciles <-  function(x)
-  quantile(x, probs = seq(0, 1, by = 0.1))
+  stats::quantile(x, probs = seq(0, 1, by = 0.1))
 
 #' @describeIn quartiles The percentiles of `x`
 #' @export
 #' @examples
 #' percentiles(x)
 percentiles <-  function(x)
-  quantile(x, probs = seq(0, 1, by = 0.01))
