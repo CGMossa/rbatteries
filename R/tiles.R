@@ -9,21 +9,24 @@
 #' @examples
 #' x <- rnorm(10)
 #' quartiles(x)
-quartiles <-  function(x, ...) {
-  stats::quantile(x, probs = c(0, 0.25, 0.5, 0.75, 1), ...)
+quartiles <-  function(x, na.rm = FALSE, names = TRUE, type = 7, ...) {
+  stats::quantile(x, probs = c(0, 0.25, 0.5, 0.75, 1),
+                  na.rm = na.rm, names = names, type = type,...)
 }
 
 #' @describeIn quartiles The deciles of `x`
 #' @export
 #' @examples
 #' deciles(x)
-deciles <-  function(x, ...)
-  stats::quantile(x, probs = seq(0, 1, by = 0.1), ...)
+deciles <-  function(x, na.rm = FALSE, names = TRUE, type = 7, ...)
+  stats::quantile(x, probs = seq(0, 1, by = 0.1),
+                  na.rm = na.rm, names = names, type = type,...)
 
 #' @describeIn  quartiles The percentiles of `x`
 #'
 #' @export
 #' @examples
 #' percentiles(x)
-percentiles <-  function(x, ...)
-  stats::quantile(x, probs = seq(0, 1, by = 0.01), ...)
+percentiles <-  function(x, na.rm = FALSE, names = TRUE, type = 7, ...)
+  stats::quantile(x, probs = seq(0, 1, by = 0.01),
+                  na.rm = na.rm, names = names, type = type,...)

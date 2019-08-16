@@ -6,17 +6,26 @@
 \alias{percentiles}
 \title{*Tiles}
 \usage{
-quartiles(x, ...)
+quartiles(x, na.rm = FALSE, names = TRUE, type = 7, ...)
 
-deciles(x, ...)
+deciles(x, na.rm = FALSE, names = TRUE, type = 7, ...)
 
-percentiles(x, ...)
+percentiles(x, na.rm = FALSE, names = TRUE, type = 7, ...)
 }
 \arguments{
 \item{x}{numeric vector whose sample quantiles are wanted, or an
     object of a class for which a method has been defined (see also
     \sQuote{details}). \code{\link{NA}} and \code{NaN} values are not
     allowed in numeric vectors unless \code{na.rm} is \code{TRUE}.}
+
+\item{na.rm}{logical; if true, any \code{\link{NA}} and \code{NaN}'s
+    are removed from \code{x} before the quantiles are computed.}
+
+\item{names}{logical; if true, the result has a \code{\link{names}}
+    attribute.  Set to \code{FALSE} for speedup with many \code{probs}.}
+
+\item{type}{an integer between 1 and 9 selecting one of the
+    nine quantile algorithms detailed below to be used.}
 
 \item{...}{further arguments passed to or from other methods.}
 }
