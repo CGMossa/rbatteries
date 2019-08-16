@@ -6,7 +6,7 @@
 \alias{rbatteries-package}
 \title{rbatteries: Help write R with all the batteries included}
 \description{
-What the package does (one paragraph).
+Includes packages that encourages modern R idioms.
 }
 \seealso{
 Useful links:
@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (YOUR-ORCID-ID)
+\strong{Maintainer}: Mossa Merhi \email{first.last@example.com} (YOUR-ORCID-ID)
 
 }
 \keyword{internal}
