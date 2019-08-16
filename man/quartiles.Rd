@@ -4,7 +4,7 @@
 \alias{quartiles}
 \alias{deciles}
 \alias{percentiles}
-\title{Tiles}
+\title{*Tiles}
 \usage{
 quartiles(x, ...)
 
