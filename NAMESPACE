@@ -3,6 +3,8 @@
 S3method(resample,data.frame)
 S3method(resample,default)
 export(deciles)
+export(inv_logit)
+export(logit)
 export(percentiles)
 export(quartiles)
 export(resample)
