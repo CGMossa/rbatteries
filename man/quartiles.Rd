@@ -4,26 +4,26 @@
 \alias{quartiles}
 \alias{deciles}
 \alias{percentiles}
-\title{Tiles
-\code{quartiles} returns the quartiles, \code{deciles} return the deciles, and \code{percentiles} returns the percentiles with a resolution of \code{0.01}.}
+\title{Tiles}
 \usage{
-quartiles(x)
+quartiles(x, ...)
 
-deciles(x)
+deciles(x, ...)
 
-percentiles(x)
+percentiles(x, ...)
 }
 \arguments{
 \item{x}{numeric vector whose sample quantiles are wanted, or an
     object of a class for which a method has been defined (see also
     \sQuote{details}). \code{\link{NA}} and \code{NaN} values are not
     allowed in numeric vectors unless \code{na.rm} is \code{TRUE}.}
+
+\item{...}{further arguments passed to or from other methods.}
 }
 \value{
 Returns the quartiles of \code{x}
 }
 \description{
-Tiles
 \code{quartiles} returns the quartiles, \code{deciles} return the deciles, and \code{percentiles} returns the percentiles with a resolution of \code{0.01}.
 }
 \section{Functions}{
@@ -33,3 +33,9 @@ Tiles
 \item \code{percentiles}: The percentiles of \code{x}
 }}
 
+\examples{
+x <- rnorm(10)
+quartiles(x)
+deciles(x)
+percentiles(x)
+}
