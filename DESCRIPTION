@@ -2,12 +2,12 @@ Package: rbatteries
 Title: Help write R with all the batteries included
 Version: 0.0.0.9001
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Mossa",
+           family = "Merhi",
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Includes packages that encourages modern R idioms. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
