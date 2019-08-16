@@ -30,16 +30,16 @@ percentiles(x, na.rm = FALSE, names = TRUE, type = 7, ...)
 \item{...}{further arguments passed to or from other methods.}
 }
 \value{
-Returns the quartiles of \code{x}
+Returns the quartiles of \code{x}.
 }
 \description{
 \code{quartiles} returns the quartiles, \code{deciles} return the deciles, and \code{percentiles} returns the percentiles with a resolution of \code{0.01}.
 }
 \section{Functions}{
 \itemize{
-\item \code{deciles}: The deciles of \code{x}
+\item \code{deciles}: Returns the deciles of \code{x}.
 
-\item \code{percentiles}: The percentiles of \code{x}
+\item \code{percentiles}: Returns the percentiles of \code{x}.
 }}
 
 \examples{
