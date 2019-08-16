@@ -5,7 +5,7 @@
 #' @export
 #'
 resample <- function(x,...) {
-  UseMethod("resample")
+  UseMethod("resample", x)
 }
 
 #' @export

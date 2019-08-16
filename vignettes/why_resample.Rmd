@@ -33,7 +33,7 @@ But what if the vector `x` is of size one?
 
 ```{r}
 x <- 42
-sample(x, replace=TRUE)
+sample(x, replace = TRUE)
 ```
 
 Suddenly the interpretation becomes sample from 1 to and including 42.
