@@ -1,4 +1,4 @@
-#' *Tiles
+#' *tiles
 #'
 #' `quartiles` returns the quartiles, `deciles` return the deciles, and `percentiles` returns the percentiles with a resolution of `0.01`.
 #'
