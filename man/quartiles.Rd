@@ -48,3 +48,9 @@ quartiles(x)
 deciles(x)
 percentiles(x)
 }
+\seealso{
+\itemize{
+\item \code{\link[stats:quantile]{stats::quantile()}}
+}
+}
+\concept{stats::quantile}

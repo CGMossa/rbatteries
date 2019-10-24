@@ -2,6 +2,7 @@
 #'
 #' @param x Object to resample
 #'
+#'
 #' @export
 #'
 resample <- function(x,...) {
